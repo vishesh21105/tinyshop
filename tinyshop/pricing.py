@@ -3,7 +3,7 @@ from tinyshop.models import Item
 GST_RATE = 0.18
 
 
-def compute_total(cart: list[Item]) -> int:
+def calc_total(cart: list[Item]) -> int:
     """Sum of price x quantity for every item in the cart."""
     return sum(item.price * item.qty for item in cart)
 

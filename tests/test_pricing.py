@@ -1,15 +1,15 @@
 import pytest
 
 from tinyshop.models import Item
-from tinyshop.pricing import add_gst, apply_discount, compute_total
+from tinyshop.pricing import add_gst, apply_discount, calc_total
 
 
-def test_compute_total():
-    assert compute_total([Item("pen", 10, 2), Item("book", 250)]) == 270
+def test_calc_total():
+    assert calc_total([Item("pen", 10, 2), Item("book", 250)]) == 270
 
 
-def test_compute_total_empty():
-    assert compute_total([]) == 0
+def test_calc_total_empty():
+    assert calc_total([]) == 0
 
 
 def test_apply_discount():
